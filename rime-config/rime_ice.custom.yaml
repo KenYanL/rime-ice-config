@@ -1,0 +1,6 @@
+# rime_ice.custom.yaml
+# 雾凇拼音自定义配置
+
+patch:
+  # 默认使用英文标点（0=中文标点，1=英文标点）
+  switches/@2/reset: 1
