@@ -1,0 +1,30 @@
+# rime_ice.custom.yaml
+# 雾凇拼音自定义配置 — 默认简体 + 英文标点 + 半角
+# 完整配置，直接覆盖 ~/Library/Rime/rime_ice.custom.yaml 后重新部署
+
+patch:
+  # 雾凇拼音 switches 顺序：
+  # @0 ascii_mode    中/英
+  # @1 ascii_punct   中文标点/英文标点
+  # @2 traditionalization  简/繁
+  # @3 emoji         关/开
+  # @4 full_shape    半角/全角
+
+  switches/@0/reset: 0    # 默认中文模式
+  switches/@1/reset: 1    # 默认英文标点
+  switches/@2/reset: 0    # 默认简体
+  switches/@3/reset: 1    # 默认开启 Emoji
+  switches/@4/reset: 0    # 默认半角
+
+  # 保守模糊音（追加到主 schema 的 speller/algebra）
+  # 声母：zh/ch/sh <-> z/c/s
+  # 韵母：an/ang, en/eng, in/ing
+  speller/algebra/+:
+    - derive/^([zcs])h/$1/
+    - derive/^([zcs])([^h])/$1h$2/
+    - derive/an$/ang/
+    - derive/ang$/an/
+    - derive/en$/eng/
+    - derive/eng$/en/
+    - derive/in$/ing/
+    - derive/ing$/in/

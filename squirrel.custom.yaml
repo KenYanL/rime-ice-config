@@ -1,0 +1,102 @@
+# squirrel.custom.yaml
+# macOS Native 主题 + 2K 外接显示器优化
+# 完整配置，直接覆盖 ~/Library/Rime/squirrel.custom.yaml 后重新部署
+
+patch:
+  # ===== 布局 =====
+  style/horizontal: true
+  style/inline_preedit: true
+  style/candidate_list_layout: linear
+  style/candidate_format: " [label] [candidate] [comment] \u200a"
+  style/candidate_count: 7
+
+  # ===== 字体（2K 显示器加大）=====
+  style/font_face: "PingFangSC-Regular,HanaMinB"
+  style/font_point: 22
+  style/label_font_face: "PingFangSC-Light"
+  style/label_font_point: 14
+  style/comment_font_face: "PingFangSC-Light"
+  style/comment_font_point: 14
+
+  # ===== 外观 =====
+  style/corner_radius: 8
+  style/border_height: 4
+  style/border_width: 4
+  style/line_spacing: 8
+  style/spacing: 12
+  style/base_offset: 2
+  style/hilite_padding: 4
+  style/shadow_size: 0
+
+  # ===== 浅色主题 =====
+  style/color_scheme: mac_light
+  preset_color_schemes/mac_light:
+    name: "macOS Light"
+    author: "Custom (based on lonr)"
+    back_color: 0xf2f1f1
+    border_color: 0xE0DFDE
+    candidate_text_color: 0x494949
+    comment_text_color: 0x9B9B9B
+    label_color: 0x808080
+    hilited_candidate_back_color: 0x2F86FF
+    hilited_candidate_text_color: 0xffffff
+    hilited_candidate_label_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    text_color: 0x808080
+    hilited_text_color: 0x494949
+    hilited_back_color: 0xEAF3FF
+
+  # ===== 深色主题（自动跟随系统）=====
+  style/color_scheme_dark: mac_dark
+  preset_color_schemes/mac_dark:
+    name: "macOS Dark"
+    author: "Custom (based on lonr)"
+    back_color: 0x393939
+    border_color: 0x4A4A4A
+    candidate_text_color: 0xebebeb
+    comment_text_color: 0x7b7b7b
+    label_color: 0x7b7b7b
+    hilited_candidate_back_color: 0x1E6FFF
+    hilited_candidate_text_color: 0xffffff
+    hilited_candidate_label_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    text_color: 0x7b7b7b
+    hilited_text_color: 0xebebeb
+    hilited_back_color: 0x3F4650
+
+  # ===== App 设置 =====
+  app_options:
+    # --- 编辑器/IDE：混输模式（中英随 Shift 切换，标点始终英文）---
+    com.microsoft.VSCode:
+      ascii_mode: false
+      ascii_punct: true
+    com.rstudio.desktop:
+      ascii_mode: false
+      ascii_punct: true
+    org.rstudio.RStudio:
+      ascii_mode: false
+      ascii_punct: true
+
+    # --- 终端：默认英文 ---
+    com.apple.Terminal:
+      ascii_mode: true
+    com.googlecode.iterm2:
+      ascii_mode: true
+    io.alacritty:
+      ascii_mode: true
+
+    # --- 搜索/启动器：默认英文 ---
+    com.raycast.macos:
+      ascii_mode: true
+    com.apple.Spotlight:
+      ascii_mode: true
+
+    # --- 其他 IDE：默认英文 ---
+    com.apple.dt.Xcode:
+      ascii_mode: true
+    com.jetbrains.intellij:
+      ascii_mode: true
+    com.jetbrains.pycharm:
+      ascii_mode: true
+    com.sublimetext.4:
+      ascii_mode: true
