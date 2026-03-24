@@ -38,13 +38,13 @@ patch:
     candidate_text_color: 0x494949
     comment_text_color: 0x9B9B9B
     label_color: 0x808080
-    hilited_candidate_back_color: 0x2F86FF
+    hilited_candidate_back_color: 0xFF862F
     hilited_candidate_text_color: 0xffffff
     hilited_candidate_label_color: 0xffffff
     hilited_comment_text_color: 0xffffff
     text_color: 0x808080
     hilited_text_color: 0x494949
-    hilited_back_color: 0xEAF3FF
+    hilited_back_color: 0xFFF3EA
 
   # ===== 深色主题（自动跟随系统）=====
   style/color_scheme_dark: mac_dark
@@ -56,13 +56,13 @@ patch:
     candidate_text_color: 0xebebeb
     comment_text_color: 0x7b7b7b
     label_color: 0x7b7b7b
-    hilited_candidate_back_color: 0x1E6FFF
+    hilited_candidate_back_color: 0xFF6F1E
     hilited_candidate_text_color: 0xffffff
     hilited_candidate_label_color: 0xffffff
     hilited_comment_text_color: 0xffffff
     text_color: 0x7b7b7b
     hilited_text_color: 0xebebeb
-    hilited_back_color: 0x3F4650
+    hilited_back_color: 0x50463F
 
   # ===== App 设置 =====
   app_options:
